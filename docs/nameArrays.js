@@ -1,0 +1,36 @@
+// blank 25 string array: = ['', '', '', '', '','', '', '', '', '','', '', '', '', '','', '', '', '', '','', '', '', '', ''];
+
+		let englishMaleFirstNames = ['Adam', 'Albert', 'Alfred', 'Alan', 'Archibald','Arthur', 'Basil', 'Charles', 'Colin', 'Donald','Douglas', 'Edgar', 'Edmund', 'Edward', 'George','Harold', 'Henry', 'Ian', 'James', 'John','Lewis', 'Oliver', 'Philip', 'Richard', 'William'];
+		let englishFemaleFirstNames = ['Abigail', 'Anne', 'Beatrice', 'Blanche', 'Catherine','Charlotte', 'Claire', 'Eleanor', 'Elizabeth', 'Emily','Emma', 'Georgia', 'Harriet', 'Joan', 'Judy','Julia', 'Lucy', 'Lydia', 'Margaret', 'Mary','Molly', 'Nora', 'Rosie', 'Sarah', 'Victoria'];
+		let englishSurnames = ['Barker', 'Brown', 'Butler', 'Carter', 'Chapman','Collins', 'Cook', 'Davies', 'Gray', 'Green','Harris', 'Jackson', 'Jones', 'Lloyd', 'Miller','Roberts', 'Smith', 'Taylor', 'Thomas', 'Turner','Watson', 'White', 'Williams', 'Wood', 'Young'];
+
+		let arabicMaleFirstNames = ['Aamir', 'Ayub', 'Binyamin', 'Efraim', 'Ibrahim','Ilyas', 'Ismail', 'Jibril', 'Jumanah', 'Kazi','Lut', 'Matta', 'Mohammed', 'Mubarak', 'Mustafa','Nazir', 'Rahim', 'Reza', 'Sharif', 'Taimur','Usman', 'Yakub', 'Yusuf', 'Zakariya', 'Zubair'];
+		let arabicFemaleFirstNames = ['Aisha', 'Alimah', 'Badia', 'Bisharah', 'Chanda','Daliya', 'Fatimah', 'Ghania', 'Halah', 'Kaylah','Khayrah', 'Layla', 'Mina', 'Munisa', 'Mysha','Naimah', 'Nissa', 'Nura', 'Parveen', 'Rana','Shalha', 'Suhira', 'Tahirah', 'Yasmin', 'Zulehka'];
+		let arabicSurnames = ['Abdel', 'Awad', 'Dahhak', 'Essa', 'Hanna','Harbi', 'Hassan', 'Isa', 'Kasim', 'Katib','Khalil', 'Malik', 'Mansoor', 'Mazin', 'Musa','Najeeb', 'Namari', 'Naser', 'Rahman', 'Rasheed','Saleh', 'Salim', 'Shadi', 'Sulaiman', 'Tabari'];
+
+		let chineseMaleNames = ['Aiguo', 'Bohai', 'Chao', 'Dai', 'Dawei','Duyi', 'Fa', 'Fu', 'Gui', 'Hong','Jianyu', 'Kang', 'Li', 'Niu', 'Peng','Quan', 'Ru', 'Shen', 'Shi', 'Song','Tao', 'Xue', 'Yi', 'Yuan', 'Zian'];
+		let chineseFemaleNames = ['Biyu', 'Changying', 'Daiyu', 'Huidai', 'Huiliang','Jia', 'Jingfei', 'Lan', 'Liling', 'Liu','Meili', 'Niu', 'Peizhi', 'Qiao', 'Qing','Ruolan', 'Shu', 'Suyin', 'Ting', 'Xia','Xiaowen', 'Xiulan', 'Ya', 'Ying', 'Zhilan'];
+		let chineseSurnames = ['Bai', 'Cao', 'Chen', 'Cui', 'Ding','Du', 'Fang', 'Fu', 'Guo', 'Han','Hao', 'Huang', 'Lei', 'Li', 'Liang','Liu', 'Long', 'Song', 'Tan', 'Tang','Wang', 'Wu', 'Xing', 'Yang', 'Zhang'];
+
+		let indianMaleFirstNames = ['Amrit', 'Ashok', 'Chand', 'Dinesh', 'Gobind','Harinder', 'Jagdish', 'Johar', 'Kurien', 'Lakshman','Madhav', 'Mahinder', 'Mohal', 'Narinder', 'Nikhil','Omrao', 'Prasad', 'Pratap', 'Ranjit', 'Sanjay','Shankar', 'Thakur', 'Vijay', 'Vipul', 'Yash'];
+		let indianFemaleFirstNames = ['Amala', 'Asha', 'Chandra', 'Devika', 'Esha','Gita', 'Indira', 'Indrani', 'Jaya', 'Jayanti','Kiri', 'Lalita', 'Malati', 'Mira', 'Mohana','Neela', 'Nita', 'Rajani', 'Sarala', 'Sarika','Sheela', 'Sunita', 'Trishna', 'Usha', 'Vasanta'];
+		let indianSurnames = ['Achari', 'Banerjee', 'Bhatnagar', 'Bose', 'Chauhan','Chopra', 'Das', 'Dutta', 'Gupta', 'Johar','Kapoor', 'Mahajan', 'Malhotra', 'Mehra', 'Nehru','Patil', 'Rao', 'Saxena', 'Sharma', 'Reddy','Singh', 'Trivedi', 'Venkatesan', 'Verma', 'Yadav'];
+
+		let japaneseMaleNames = ['Akira', 'Daisuke', 'Fukashi', 'Goro', 'Hiro','Hiroya', 'Hotaka', 'Katsu', 'Katsuto', 'Keishuu','Kyuuto', 'Mikiya', 'Mitsunobu', 'Mitsuru', 'Naruhiko','Nobu', 'Shigeo', 'Shigeto', 'Shou', 'Shuji','Takaharu', 'Teruaki', 'Tsukasa', 'Yasuharu', 'Tetsushi'];
+		let japaneseFemaleNames = ['Aemi', 'Airi', 'Ako', 'Ayu', 'Chikaze','Eriko', 'Hina', 'Kaori', 'Keiko', 'Kyouka','Mayumi', 'Miho', 'Namiko', 'Natsu', 'Nobuko','Rei', 'Ririsa', 'Sakimi', 'Shihoko', 'Shika','Tsukiko', 'Tsuzune', 'Yoriko', 'Yorimi', 'Yoshiko'];
+		let japaneseSurnames = ['Abe', 'Arakaki', 'Endo', 'Fujiwara', 'Goto','Ito', 'Kikuchi', 'Kinjo', 'Kobayashi', 'Koga','Komatsu', 'Maeda', 'Nakamura', 'Narita', 'Ochi','Oshiro', 'Saito', 'Sakamoto', 'Sato', 'Suzuki','Takahashi', 'Tanaka', 'Watanabe', 'Yamamoto', 'Yamasaki'];
+
+		let nigerianMaleFirstNames = ['Adesegun', 'Akintola', 'Amabere', 'Arikawe', 'Asagwara','Chidubem', 'Chinedu', 'Chiwetei', 'Damilola', 'Esangbedo','Ezenwoye', 'Folarin', 'Genechi', 'Idowu', 'Kelechi','Ketanndu', 'Melubari', 'Nkanta', 'Obafemi', 'Olatunde','Olumide', 'Tombari', 'Udofia', 'Uyoata', 'Uzochi'];
+		let nigerianFemaleFirstNames = ['Abike', 'Adesuwa', 'Adunola', 'Anguli', 'Arewa','Asari', 'Bisola', 'Chioma', 'Eduwa', 'Emilohi','Fehintola', 'Folasade', 'Mahparah', 'Minika', 'Nkolika','Nkoyo', 'Nuane', 'Obioma', 'Olafemi', 'Shanumi','Somanabo', 'Suliat', 'Tariere', 'Temedire', 'Yemisi'];
+		let nigerianSurnames = ['Adegboye', 'Adeniyi', 'Adeyeku', 'Adunola', 'Agbaje','Akpan', 'Akpehi', 'Aliki', 'Asuni', 'Babangida','Ekim', 'Ezeiruaku', 'Fabiola', 'Fasola', 'Nwokolo','Nzeocha', 'Ojo', 'Okonkwo', 'Okoye', 'Olaniyan','Olawale', 'Olumese', 'Onajobi', 'Soyinka', 'Yamusa'];
+
+		let russianMaleFirstNames = ['Aleksandr', 'Andrei', 'Arkady', 'Boris', 'Dmitri','Dominik', 'Grigory', 'Igor', 'Ilya', 'Ivan','Kiril', 'Konstantin', 'Leonid', 'Nikolai', 'Oleg','Pavel', 'Petr', 'Sergei', 'Stepan', 'Valentin','Vasily', 'Viktor', 'Yakov', 'Yegor', 'Yuri'];
+		let russianFemaleFirstNames = ['Aleksandra', 'Anastasia', 'Anja', 'Catarina', 'Devora','Dima', 'Ekaterina', 'Eva', 'Irina', 'Karolina','Katlina', 'Kira', 'Ludmilla', 'Mara', 'Nadezdha','Nastassia', 'Natalya', 'Oksana', 'Olena', 'Olga','Sofia', 'Svetlana', 'Taryana', 'Vilma', 'Yelena'];
+		let russianMaleSurnames = ['Abelev', 'Bobrikov', 'Chemerkin', 'Gogunov', 'Gurov','Iltchenko', 'Kavelin', 'Komarov', 'Korovin', 'Kurnikov','Lebedev', 'Litvak', 'Mekhdiev', 'Muraviov', 'Nikitin','Ortov', 'Peshkov', 'Romasko', 'Shvedov', 'Sikorski','Stolypin', 'Turov', 'Volokh', 'Zaitsev', 'Zhukov'];
+		let russianFemaleSurnames = ['Abeleva', 'Bobrikova', 'Chemerkina', 'Gogunova', 'Gurova','Iltchenko', 'Kavelina', 'Komarova', 'Korovina', 'Kurnikova','Lebedev', 'Litvak', 'Mekhdiev', 'Muraviova', 'Nikitina','Ortova', 'Peshkova', 'Romasko', 'Shvedova', 'Sikorski','Stolypina', 'Turova', 'Volokh', 'Zaitsev', 'Zhukova'];
+
+		// Female Russian surnames can have 'a' at the end in certain circumstances, so an additional array has been added to accomodate this.
+
+		let spanishMaleFirstNames = ['Alejandro', 'Alonso', 'Amelio', 'Armando', 'Bernardo','Carlos', 'Cesar', 'Diego', 'Emilio', 'Estevan','Felipe', 'Francisco', 'Guillermo', 'Javier', 'Jose','Juan', 'Julio', 'Luis', 'Pedro', 'Raul','Ricardo', 'Salvador', 'Santiago', 'Valeriano', 'Vicente'];
+		let spanishFemaleFirstNames = ['Adalina', 'Aleta', 'Ana', 'Ascencion', 'Beatriz','Carmela', 'Celia', 'Dolores', 'Elena', 'Emelina','Felipa', 'Inez', 'Isabel', 'Jacinta', 'Lucia','Lupe', 'Maria', 'Marta', 'Nina', 'Paloma','Rafaela', 'Soledad', 'Teresa', 'Valencia', 'Zenaida'];
+		let spanishSurnames = ['Arellano', 'Arispana', 'Borrego', 'Carderas', 'Carranzo','Cordova', 'Enciso', 'Espejo', 'Gavilan', 'Guerra','Guillen', 'Huertas', 'Illan', 'Jurado', 'Moretta','Motolina', 'Pancorbo', 'Paredes', 'Quesada', 'Roma','Rubiera', 'Santoro', 'Torrillas', 'Vera', 'Vivero'];

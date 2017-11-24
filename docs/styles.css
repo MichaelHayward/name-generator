@@ -1,0 +1,38 @@
+html {
+	background: #1c1c1c;
+}
+
+body {
+	font-family: Raleway;
+	line-height: 0.9;
+	color: #efefef;
+	display: flex;
+	justify-content: center;
+}
+
+h1 {
+	color: #928540;
+	text-align: center;
+}
+
+.namePlate {
+	font-weight: bold; 
+	color: #928540;
+}
+
+.name-column {
+	padding-left: 20px;
+}
+
+th {
+	text-align: left;
+	text-decoration: underline;
+}
+
+.gender-column {
+	text-align: center;
+}
+
+table {
+	margin: auto;
+}

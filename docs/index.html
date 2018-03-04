@@ -2,106 +2,54 @@
 
 <head>
 	<title>SWN Names</title>
-	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="charGen.css">
 	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 	<script src="https://use.fontawesome.com/ba9799e532.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
-	
-	<section id="nameGen">
-		<h1>Stars Without Number Name Generator</h1>
-		<table>
-			<tr>
-				<th>Culture</th>
-				<th class="gender-column">Gender</th>
-				<th class="name-column">Name</th>
-			</tr>
-			<tr>
-				<td><p>Arabic</td>
-				<td class="gender-column"><i class="fa fa-mars" aria-hidden="true"></i></td>
-				<td class="namePlate name-column" id="arabicMalePrintArea"></td>
-			</tr>
-			<tr>
-				<td><p>Arabic</td>
-				<td class="gender-column"><i class="fa fa-venus" aria-hidden="true"></i></td>
-				<td><span class="namePlate name-column" id="arabicFemalePrintArea"></span></td>
-			</tr>
-			<tr>
-				<td><p>English</td>
-				<td class="gender-column"><i class="fa fa-mars" aria-hidden="true"></i></td>
-				<td><span class="namePlate name-column" id="englishMalePrintArea"></span></td>
-			</tr>
-			<tr>
-				<td><p>English</td>
-				<td class="gender-column"><i class="fa fa-venus" aria-hidden="true"></i></td>
-				<td><span class="namePlate name-column" id="englishFemalePrintArea"></span></td>
-			</tr>
-			<tr>
-				<td><p>Chinese</td>
-				<td class="gender-column"><i class="fa fa-mars" aria-hidden="true"></i></td>
-				<td><span class="namePlate name-column" id="chineseMalePrintArea"></span></td>
-			</tr>
-			<tr>
-				<td><p>Chinese</td>
-				<td class="gender-column"><i class="fa fa-venus" aria-hidden="true"></i></td>
-				<td><span class="namePlate name-column" id="chineseFemalePrintArea"></span></td>
-			</tr>
-			<tr>
-				<td><p>Indian</td>
-				<td class="gender-column"><i class="fa fa-mars" aria-hidden="true"></i></td>
-				<td><span class="namePlate name-column" id="indianMalePrintArea"></span></td>
-			</tr>
-			<tr>
-				<td><p>Indian</td>
-				<td class="gender-column"><i class="fa fa-venus" aria-hidden="true"></i></td>
-				<td><span class="namePlate name-column" id="indianFemalePrintArea"></span></td>
-			</tr>
-			<tr>
-				<td><p>Japanese</td>
-				<td class="gender-column"><i class="fa fa-mars" aria-hidden="true"></i></td>
-				<td><span class="namePlate name-column" id="japaneseMalePrintArea"></span></td>
-			</tr>
-			<tr>
-				<td><p>Japanese</td>
-				<td class="gender-column"><i class="fa fa-venus" aria-hidden="true"></i></td>
-				<td><span class="namePlate name-column" id="japaneseFemalePrintArea"></span></td>
-			</tr>
-			<tr>
-				<td><p>Nigerian</td>
-				<td class="gender-column"><i class="fa fa-mars" aria-hidden="true"></i></td>
-				<td><span class="namePlate name-column" id="nigerianMalePrintArea"></span></td>
-			</tr>
-			<tr>
-				<td><p>Nigerian</td>
-				<td class="gender-column"><i class="fa fa-venus" aria-hidden="true"></i></td>
-				<td><span class="namePlate name-column" id="nigerianFemalePrintArea"></span></td>
-			</tr>
-			<tr>
-				<td><p>Russian</td>
-				<td class="gender-column"><i class="fa fa-mars" aria-hidden="true"></i></td>
-				<td><span class="namePlate name-column" id="russianMalePrintArea"></span></td>
-			</tr>
-			<tr>
-				<td><p>Russian</td>
-				<td class="gender-column"><i class="fa fa-venus" aria-hidden="true"></i></td>
-				<td><span class="namePlate name-column" id="russianFemalePrintArea"></span></td>
-			</tr>
-			<tr>
-				<td><p>Spanish</td>
-				<td class="gender-column"><i class="fa fa-mars" aria-hidden="true"></i></td>
-				<td><span class="namePlate name-column" id="spanishMalePrintArea"></span></td>
-			</tr>
-			<tr>
-				<td><p>Spanish</td>
-				<td class="gender-column"><i class="fa fa-venus" aria-hidden="true"></i></td>
-				<td><span class="namePlate name-column" id="spanishFemalePrintArea"></span></td>
-			</tr>
-		</table>
-	
-	</section>
+	<table>
+		<tr>
+			<td class="fieldTitle">Name:</td>
+			<td id="nameTarget"></td>
+		</tr>
+		<tr>
+			<td class="fieldTitle">Sex:</td>
+			<td id="sexTarget"></td>
+		</tr>
+		<tr>
+			<td class="fieldTitle">Heritage:</td>
+			<td id="heritageTarget"></td>
+		</tr>
+		<tr>
+			<td class="fieldTitle">Social Class/Background:</td>
+			<td id="backgroundTarget"></td>
+		</tr>
+		<tr>
+			<td class="fieldTitle">Occupation:</td>
+			<td id="occupationTarget"></td>
+		</tr>
+		<tr>
+			<td class="fieldTitle">Their Problem:</td>
+			<td id="problemTarget"></td>
+		</tr>
+		<tr>
+			<td class="fieldTitle">Age Trait:</td>
+			<td id="ageTarget"></td>
+		</tr>
+		<tr>
+			<td class="fieldTitle">Greatest Desire:</td>
+			<td id="desireTarget"></td>
+		</tr>
+		<tr>
+			<td class="fieldTitle">Obvious Character Trait:</td>
+			<td id="traitTarget"></td>
+		</tr>
+	</table>
+	<script type="text/javascript" src="charTraits.js"></script>
 	<script type="text/javascript" src="nameArrays.js"></script>
 	<script type="text/javascript" src="nameLogic.js"></script>
+	<script type="text/javascript" src="charLogic.js"></script>
 </body>
 </html>

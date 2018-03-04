@@ -1,52 +1,149 @@
-// DOM selection variables
+var genders = ['Male', 'Female']
+var cultures = ['Arabic', 'Chinese', 'English', 'Indian', 'Japanese',
+	'Nigerian', 'Russian', 'Spanish'];
 
-var englishMaleName = document.getElementById('englishMalePrintArea');
-var englishFemaleName = document.getElementById('englishFemalePrintArea');
-var arabicMaleName = document.getElementById('arabicMalePrintArea');
-var arabicFemaleName = document.getElementById('arabicFemalePrintArea');
-var chineseMaleName = document.getElementById('chineseMalePrintArea');
-var chineseFemaleName = document.getElementById('chineseFemalePrintArea');
-var indianMaleName = document.getElementById('indianMalePrintArea');
-var indianFemaleName = document.getElementById('indianFemalePrintArea');
-var japaneseMaleName = document.getElementById('japaneseMalePrintArea');
-var japaneseFemaleName = document.getElementById('japaneseFemalePrintArea');
-var nigerianMaleName = document.getElementById('nigerianMalePrintArea');
-var nigerianFemaleName = document.getElementById('nigerianFemalePrintArea');
-var russianMaleName = document.getElementById('russianMalePrintArea');
-var russianFemaleName = document.getElementById('russianFemalePrintArea');
-var spanishMaleName = document.getElementById('spanishMalePrintArea');
-var spanishFemaleName = document.getElementById('spanishFemalePrintArea');
+var thisGender;
+var thisCulture;
+var fullName;
 
-englishMaleName.innerHTML = englishMaleFirstNames[Math.floor(Math.random()*englishMaleFirstNames.length)] + ' ' + englishSurnames[Math.floor(Math.random()*englishSurnames.length)];
-englishFemaleName.innerHTML = englishFemaleFirstNames[Math.floor(Math.random()*englishFemaleFirstNames.length)] + ' ' + englishSurnames[Math.floor(Math.random()*englishSurnames.length)];
-
-		// Below: 25% chance for Arabic surnames to have an 'al-' prefix.
-
-let alChance = Math.floor(Math.random()*4);
-
-if(alChance === 0){
-	arabicMaleName.innerHTML = arabicMaleFirstNames[Math.floor(Math.random()*arabicMaleFirstNames.length)] + ' al-' + arabicSurnames[Math.floor(Math.random()*arabicSurnames.length)];
-	arabicFemaleName.innerHTML = arabicFemaleFirstNames[Math.floor(Math.random()*arabicFemaleFirstNames.length)] + ' al-' + arabicSurnames[Math.floor(Math.random()*arabicSurnames.length)];
-}
-else{
-	arabicMaleName.innerHTML = arabicMaleFirstNames[Math.floor(Math.random()*arabicMaleFirstNames.length)] + ' ' + arabicSurnames[Math.floor(Math.random()*arabicSurnames.length)];
-	arabicFemaleName.innerHTML = arabicFemaleFirstNames[Math.floor(Math.random()*arabicFemaleFirstNames.length)] + ' ' + arabicSurnames[Math.floor(Math.random()*arabicSurnames.length)];
+function ourChar() {
+	thisGender = genders[Math.floor(Math.random() * genders.length)];
+	thisCulture = cultures[Math.floor(Math.random() * cultures.length)];
+	if (thisCulture === 'Arabic') {
+		arabic();
+	} else if (thisCulture === 'Chinese') {
+		chinese();
+	} else if (thisCulture === 'English') {
+		english();
+	} else if (thisCulture === 'Indian') {
+		indian();
+	} else if (thisCulture === 'Japanese') {
+		japanese();
+	} else if (thisCulture === 'Nigerian') {
+		nigerian();
+	} else if (thisCulture === 'Russian') {
+		russian();
+	} else if (thisCulture === 'Spanish') {
+		spanish();
+	}
+	printNames();
 }
 
-chineseMaleName.innerHTML = chineseSurnames[Math.floor(Math.random()*chineseSurnames.length)] + ' ' + chineseMaleNames[Math.floor(Math.random()*chineseMaleNames.length)];
-chineseFemaleName.innerHTML = chineseSurnames[Math.floor(Math.random()*chineseSurnames.length)] + ' ' + chineseFemaleNames[Math.floor(Math.random()*chineseFemaleNames.length)];
+function printNames() {
+	let nameTarget = document.getElementById('nameTarget');
+	let sexTarget = document.getElementById('sexTarget');
+	let heritageTarget = document.getElementById('heritageTarget');
 
-indianMaleName.innerHTML = indianMaleFirstNames[Math.floor(Math.random()*indianMaleFirstNames.length)] + ' ' + indianSurnames[Math.floor(Math.random()*indianSurnames.length)];
-indianFemaleName.innerHTML = indianFemaleFirstNames[Math.floor(Math.random()*indianFemaleFirstNames.length)] + ' ' + indianSurnames[Math.floor(Math.random()*indianSurnames.length)];
+	nameTarget.innerHTML = fullName;
+	sexTarget.innerHTML = thisGender;
+	heritageTarget.innerHTML = thisCulture;
+}
 
-japaneseMaleName.innerHTML = japaneseSurnames[Math.floor(Math.random()*japaneseSurnames.length)] + ' ' + japaneseMaleNames[Math.floor(Math.random()*japaneseMaleNames.length)];
-japaneseFemaleName.innerHTML = japaneseSurnames[Math.floor(Math.random()*japaneseSurnames.length)] + ' ' + japaneseFemaleNames[Math.floor(Math.random()*japaneseFemaleNames.length)];
+function arabic() {
+	console.log('Arabic function called');
+	let firstName;
+	if (thisGender === 'Female'){
+		firstName = arabicFemaleFirstNames[Math.floor(Math.random() * arabicFemaleFirstNames.length)];
+	} else {
+		firstName = arabicMaleFirstNames[Math.floor(Math.random() * arabicMaleFirstNames.length)];
+	}
+	let surname = arabicSurnames[Math.floor(Math.random() * arabicSurnames.length)];
+	let alChance = Math.floor(Math.random() * 4); //  25% chance of prefix
+	if (alChance === 0) {
+		surname = 'al-' + surname; // affixes 'al-' prefix to surname variable
+	}
+	fullName = firstName + ' ' + surname;
+	printNames();
+}
 
-nigerianMaleName.innerHTML = nigerianMaleFirstNames[Math.floor(Math.random()*nigerianMaleFirstNames.length)] + ' ' + nigerianSurnames[Math.floor(Math.random()*nigerianSurnames.length)];
-nigerianFemaleName.innerHTML = nigerianFemaleFirstNames[Math.floor(Math.random()*nigerianFemaleFirstNames.length)] + ' ' + nigerianSurnames[Math.floor(Math.random()*nigerianSurnames.length)];
+function chinese() {
+	console.log('Chinese function called');
+	let familyName = chineseSurnames[Math.floor(Math.random() * chineseSurnames.length)];
+	let personName;
+	if (thisGender === 'Female') {
+		personName = chineseFemaleNames[Math.floor(Math.random() * chineseFemaleNames.length)]
+	} else {
+		personName = chineseMaleNames[Math.floor(Math.random() * chineseMaleNames.length)];
+	}
+	fullName = familyName + ' ' + personName;
+	printNames();
+}
 
-russianMaleName.innerHTML = russianMaleFirstNames[Math.floor(Math.random()*russianMaleFirstNames.length)] + ' ' + russianMaleSurnames[Math.floor(Math.random()*russianMaleSurnames.length)];
-russianFemaleName.innerHTML = russianFemaleFirstNames[Math.floor(Math.random()*russianFemaleFirstNames.length)] + ' ' + russianFemaleSurnames[Math.floor(Math.random()*russianFemaleSurnames.length)];
+function english() {
+	console.log('English function called');
+	let firstName;
+	if (thisGender === 'Female') {
+		firstName = englishFemaleFirstNames[Math.floor(Math.random() * englishFemaleFirstNames.length)];
+	} else {
+		firstName = englishMaleFirstNames[Math.floor(Math.random() * englishMaleFirstNames.length)];
+	}
+	let surname = englishSurnames[Math.floor(Math.random() * englishSurnames.length)]
+	fullName = firstName + ' ' + surname;
+	printNames();
 
-spanishMaleName.innerHTML = spanishMaleFirstNames[Math.floor(Math.random()*spanishMaleFirstNames.length)] + ' ' + spanishSurnames[Math.floor(Math.random()*spanishSurnames.length)];
-spanishFemaleName.innerHTML = spanishFemaleFirstNames[Math.floor(Math.random()*spanishFemaleFirstNames.length)] + ' ' + spanishSurnames[Math.floor(Math.random()*spanishSurnames.length)];
+}
+
+function indian() {
+	console.log('Indian function called');
+	let firstName;
+	if (thisGender === 'Female') {
+		firstName = indianFemaleFirstNames[Math.floor(Math.random() * indianFemaleFirstNames.length)];
+	} else {
+		firstName = indianMaleFirstNames[Math.floor(Math.random() * indianMaleFirstNames.length)];
+	}
+	let surname = indianSurnames[Math.floor(Math.random() * indianSurnames.length)];
+	fullName = firstName + ' ' + surname;
+}
+
+function japanese() {
+	console.log('Japanese function called');
+	let familyName = japaneseSurnames[Math.floor(Math.random() * japaneseSurnames.length)];
+	let personName;
+	if (thisGender === 'Female') {
+		personName = japaneseFemaleNames[Math.floor(Math.random() * japaneseFemaleNames.length)]
+	} else {
+		personName = japaneseMaleNames[Math.floor(Math.random() * japaneseMaleNames.length)];
+	}
+	fullName = familyName + ' ' + personName;
+	printNames();
+}
+
+function nigerian() {
+	console.log('Nigerian function called');
+	let firstName;
+	if (thisGender === 'Female') {
+		firstName = nigerianFemaleFirstNames[Math.floor(Math.random() * nigerianFemaleFirstNames.length)];
+	} else {
+		firstName = nigerianMaleFirstNames[Math.floor(Math.random() * nigerianMaleFirstNames.length)];
+	}
+	let surname = nigerianSurnames[Math.floor(Math.random() * nigerianSurnames.length)];
+	fullName = firstName + ' ' + surname;
+}
+
+function russian() {
+	console.log('Russian function called');
+	let firstName;
+	let surname;
+	if (thisGender === 'Female') {
+		firstName = russianFemaleFirstNames[Math.floor(Math.random() * russianFemaleFirstNames.length)];
+		surname = russianFemaleSurnames[Math.floor(Math.random() * russianFemaleSurnames.length)];
+	} else {
+		firstName = russianMaleFirstNames[Math.floor(Math.random() * russianMaleFirstNames.length)];
+		surname = russianMaleSurnames[Math.floor(Math.random() * russianMaleSurnames.length)];
+	}
+	fullName = firstName + ' ' + surname;
+}
+
+function spanish() {
+	console.log('Spanish function called');
+	let firstName;
+	if (thisGender === 'Female') {
+		firstName = spanishFemaleFirstNames[Math.floor(Math.random() * spanishFemaleFirstNames.length)];
+	} else {
+		firstName = spanishMaleFirstNames[Math.floor(Math.random() * spanishMaleFirstNames.length)];
+	}
+	let surname = spanishSurnames[Math.floor(Math.random() * spanishSurnames.length)];
+	fullName = firstName + ' ' + surname;
+}
+
+ourChar();
